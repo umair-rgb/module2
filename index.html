@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      /* Common styles for all screen sizes */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .paragraph {
+            flex: 1;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Styles for large screens */
+        @media (min-width: 1024px) {
+            .paragraph.large {
+                background-color: blue;
+                order: 1;
+            }
+        }
+
+        /* Styles for medium screens */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .paragraph.medium {
+                background-color: green;
+                order: 2;
+            }
+        }
+
+        /* Styles for small screens */
+        @media (max-width: 767px) {
+            .paragraph.small {
+                background-color: red;
+                order: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="paragraph large">This is a large screen paragraph.</div>
+        <div class="paragraph medium">This is a medium screen paragraph.</div>
+        <div class="paragraph small">This is a small screen paragraph.</div>
+    </div>
+</body>
+</html>
